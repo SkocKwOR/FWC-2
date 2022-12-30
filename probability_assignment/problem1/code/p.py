@@ -1,5 +1,4 @@
 import numpy as np
-#rng = np.random.default_rng(12345)
 #simulation length
 s = 10000
 ps = 10/10000 #probability of wining with one ticket
