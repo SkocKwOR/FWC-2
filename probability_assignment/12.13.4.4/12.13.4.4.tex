@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage{amssymb,amsfonts,amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref,xcolor}
+\hypersetup{
+    colorlinks,
+    urlcolor={black}	%black!50!blue
+}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+\setlist[enumerate]{font=\small\bfseries}
+
+\begin{document}
+
+\title{NCERT: Class XII}
+\author{\Large Pavan Kumar P - FWC22088}
+\date{}
+
+\maketitle
+
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]
+\numberwithin{equation}{enumi}
+\numberwithin{table}{enumi}
+
+\setcounter{enumi}{3}
+\setcounter{enumii}{4}
+
+\item Find the probability distribution of\\
+(i) number of heads in two tosses of a coin.\\
+(ii) number of tails in the simultaneous tosses of three coins.\\
+(iii) number of heads in four tosses of a coin.\\[1ex]
+\solution
+\begin{enumerate} 
+
+\begin{table}[h]
+ \centering
+	\input{tables/table_d.tex}
+	\caption{Variable Description }
+\end{table}
+\item Number of heads in two tosses of a coin.\\
+ By using binomial distribution
+ \begin{align}
+P_X\brak{X_1} &= \comb{n}{X_1}p^{X_1}q^{n-X_1}\\
+X_1 &= k\\
+  F_X(k) &=
+    \begin{cases}
+      \comb{n}{k}p^{k}q^{n-k}, & \text{if  0$\leq$k$\leq$ 2}\\
+    \end{cases}             
+\end{align}
+
+\item Number of tails in the simultaneous tosses of three coins.\\
+ By using binomial distribution\\
+ \begin{align}
+ P_X\brak{X_2} &= \comb{n}{X_2}p^{X_2}q^{n-X_2}\\
+ X_2 &= k\\
+  F_X(k) &=
+    \begin{cases}
+      \comb{n}{k}p^{k}q^{n-k}, & \text{if  0 $\leq$ k $\leq$ 3}\\
+    \end{cases}       
+\end{align}
+\item Number of heads in four tosses of a coin.\\
+ By using binomial distribution\\
+ \begin{align}
+ P_X\brak{X_3} &= \comb{n}{X_3}p^{X_3}q^{n-X_3}\\
+ X_3 &= k\\
+  F_X(k) &=
+    \begin{cases}
+      \comb{n}{k}p^{k}q^{n-k}, & \text{  0 $\leq$ k $\leq$ 4}\\
+    \end{cases}       
+\end{align}
+\end{enumerate}
+\end{enumerate}
+\end{document}
